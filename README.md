@@ -1,6 +1,6 @@
-# Maelstrom Echo in TypeScript
+# Maelstrom Fly.io Dyst Challenge
 
-This is a TypeScript implementation of Fly.io's Gossip Glomers challenge 1, Echo.
+This is a Bun TypeScript implementation of Fly.io's Gossip Glomers challenge 1, Echo.
 
 Maelstrom nodes are language agnostic: the executable reads newline-delimited JSON messages from `STDIN` and writes newline-delimited JSON replies to `STDOUT`. This project implements the required `init` and `echo` handlers in TypeScript.
 
