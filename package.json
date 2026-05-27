@@ -1,0 +1,19 @@
+{
+  "name": "maelstrom-echo-ts",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "bun@1.3.11",
+  "bin": {
+    "maelstrom-echo-ts": "src/index.ts"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "start": "bun src/index.ts",
+    "test:sample": "printf '%s\\n%s\\n' '{\"src\":\"c0\",\"dest\":\"n0\",\"body\":{\"type\":\"init\",\"msg_id\":1,\"node_id\":\"n0\",\"node_ids\":[\"n0\"]}}' '{\"src\":\"c1\",\"dest\":\"n0\",\"body\":{\"type\":\"echo\",\"msg_id\":1,\"echo\":\"Please echo 35\"}}' | bun src/index.ts",
+    "test:maelstrom": "tools/maelstrom/maelstrom test -w echo --bin \"$(pwd)/src/index.ts\" --node-count 1 --time-limit 10"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.3"
+  }
+}
